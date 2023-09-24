@@ -34,12 +34,12 @@ const favoriteFoods = ['Bread','Fried Rice','Pizza','Ramen','Halal Burger'];
 foodElement.textContent = favoriteFoods
 
 
-imageElement.setAttribute('src', console());
-imageElement.setAttribute('alt', `profile image of ${fullname}`);
+//imageElement.setAttribute('src', console());
+//imageElement.setAttribute('alt', `profile image of ${fullname}`);
 //foodElement.textContent = foodText;
 
-const delicious= ['Mac n Cheese'];
-delicious.push(favoriteFoods);
+const delicious= 'mac n cheese';
+favoriteFoods.push(delicious);
 foodElement.textContent = favoriteFoods
 foodElement.innerHTML+= `<br>${favoriteFoods}`;
 favoriteFoods.shift();
