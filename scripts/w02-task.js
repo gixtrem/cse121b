@@ -6,6 +6,9 @@ const favoriteFoods = ['Bread','Fried Rice','Pizza','Ramen','Halal Burger'];
 //const currentYear = new Date().getFullYear();   
 const currentYear = 2023
 var profilePicture = "images/myself.jpg";
+var imageElement = document.querySelector("#profilePicture");
+
+
 
 //const directory = 'images/';
 //const fileName = 'myself.jpg';
@@ -18,26 +21,32 @@ nameElement.textContent = fullname
 //const foodElement = document.getElementById('food');
 const foodElement = document.getElementById('food');
 foodElement.textContent = favoriteFoods
+foodElement.innerHTML = favoriteFoods.join(", ");
+
 
 var yearElement = document.querySelector('#year');
 yearElement.textContent = currentYear;
 
 //const yearElement = document.querySelector('#year');
-const imageElement = document.getElementById('profilePicture');
+
 //var imageElement = document.querySelector('home');
 
 nameElement.innerHTML = `<strong>${fullname}</strong>`; 
 //yearElement.textContent = currentYear.toString();
 yearElement.textContent = currentYear;
 
-const delicious= 'mac n cheese';
+
+const delicious= "Lasagna";
 favoriteFoods.push(delicious);
-foodElement.textContent = favoriteFoods
+//foodElement.innerHTML += "<br>" + delicious;
 foodElement.innerHTML+= `<br>${favoriteFoods}`;
+//foodElement.textContent = favoriteFoods
 favoriteFoods.shift();
-foodElement.innerHTML += favoriteFoods;
+foodElement.innerHTML+= `<br>${favoriteFoods}`;
+//foodElement.innerHTML += favoriteFoods;
 favoriteFoods.pop();
-foodElement.innerHTML += favoriteFoods;
+foodElement.innerHTML+= `<br>${favoriteFoods}`;
+//foodElement.innerHTML += favoriteFoods;
 
 imageElement.setAttribute("src", profilePicture);
 
