@@ -31,8 +31,51 @@ function subtractNumbers(){
      document.querySelector("#difference").value = difference
 }
 /* Arrow Function - Multiply Numbers */
+
+let multiply = (number1, number2) => {
+    const product = number1 * number2
+    return product
+}
+
+let multiplyNumbers = () => {
+    const firstNumber = parseFloat(document.querySelector("#factor1").value)
+    const secondNumber = parseFloat(document.querySelector("#factor2").value)
+     const product = multiply(firstNumber, secondNumber)
+     document.querySelector("#product").value = product
+}
+
+
+let divide = (dividend, divisor) => {
+    const quotient = dividend / divisor
+    return quotient
+}
+
+let quotientNumber = () => {
+    const dividend = parseFloat(document.querySelector("#dividend").value)
+    const divisor = parseFloat(document.querySelector("#divisor").value)
+     const quotient = divide(dividend, divisor)
+     document.querySelector("#quotient").value = quotient
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 document.querySelector("#addNumbers").addEventListener('click', addNumbers )
 document.querySelector("#subtractNumbers").addEventListener('click', subtractNumbers )
+document.querySelector("#multiplyNumbers").addEventListener('click', multiplyNumbers )
+document.querySelector("#divideNumbers").addEventListener('click', divideNumbers )
 
 
 
