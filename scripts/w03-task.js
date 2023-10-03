@@ -58,19 +58,7 @@ let quotientNumber = () => {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+//hmmmmmmmmm so tired from coding somebody save me please
 
 document.querySelector("#addNumbers").addEventListener('click', addNumbers )
 document.querySelector("#subtractNumbers").addEventListener('click', subtractNumbers )
@@ -84,6 +72,11 @@ document.querySelector("#divideNumbers").addEventListener('click', divideNumbers
 
 
 /* Decision Structure */
+const currentDate = new Date();
+let currentYear;
+currentYear = currentDate.getFullYear();
+const yearInputElement = document.getElementById('year');
+yearInputElement.value = currentYear;
 
 
 /* ARRAY METHODS - Functional Programming */
