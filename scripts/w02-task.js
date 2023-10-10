@@ -16,7 +16,7 @@ const currentYear = 2023
 const nameElement = document.getElementById('name');
 nameElement.textContent = fullname
 
-const profilePicture = 'images/myself.jpg'
+const profilePicture = 'images/myself.jpg';
 
 //const foodElement = document.getElementById('food');
 const foodElement = document.getElementById('food');

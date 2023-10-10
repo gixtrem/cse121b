@@ -4,7 +4,7 @@
 const myProfile = {};
 
 myProfile.name = "Umah Godday";
-myProfile.photo = "profilePicture";
+myProfile.photo = "images/myself.jpg";
 myProfile.favoriteFoods = ["Rice", "Tikka Masala", "Prioshki", "shrimp", "Banana Cream Pie"];
 myProfile.hobbies = ["Volleyball", "Soccer", "Basket ball"];
 // myProfile.placeLived = ["Nigeria", "Ghana", "Dubai", "USA"];
