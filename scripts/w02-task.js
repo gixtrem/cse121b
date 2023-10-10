@@ -16,6 +16,8 @@ const currentYear = 2023
 const nameElement = document.getElementById('name');
 nameElement.textContent = fullname
 
+const profilePicture = 'images/myself.jpg'
+
 //const foodElement = document.getElementById('food');
 const foodElement = document.getElementById('food');
 foodElement.textContent = favoriteFoods
@@ -46,13 +48,16 @@ favoriteFoods.pop();
 foodElement.innerHTML+= `<br>${favoriteFoods}`;
 //foodElement.innerHTML += favoriteFoods;
 
+imageElement.setAttribute('src', profilePicture);
+imageElement.setAttribute('alt', `profile image of ${fullname}`);
+
 //var profilePicture = "images/myself.jpg";
 //var imageElement = document.querySelector("#profilePicture");
 //imageElement.setAttribute("src", profilePicture);
-var profilePicturePath = 'myself.jpg';
-var profileimage = document.getElementById('profileimage');
-profileimage.setAttribute('src', profilePicturePath);
-profileimage.alt = 'profile image of ' + fullname;
+// var profilePicturePath = 'myself.jpg';
+// var profileimage = document.getElementById('profileimage');
+// profileimage.setAttribute('src', profilePicturePath);
+// profileimage.alt = 'profile image of ' + fullname;
 //const favoriteFoods = ['bread','Fried Rice','Pizza','Ramen','Halal Burger'];
 //const foodText = favoriteFoods.join(', ');
 
