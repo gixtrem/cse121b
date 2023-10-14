@@ -5,13 +5,20 @@ const myProfile = {};
 
 myProfile.name = "Umah Godday";
 myProfile.photo = "images/myself.jpg";
+Image.src = "myself.jpg"
+photo.alt = "An updated image"
 myProfile.favoriteFoods = ["Rice", "Tikka Masala", "Prioshki", "shrimp", "Banana Cream Pie"];
 myProfile.hobbies = ["Volleyball", "Soccer", "Basket ball"];
 // myProfile.placeLived = ["Nigeria", "Ghana", "Dubai", "USA"];
 myProfile.placesLived = [];
 
 /* Populate Profile Object with placesLive objects */
-
+myProfile.placesLived.push(
+    {
+        place:'Rexburg, USA',
+        length : '2 year'
+    }
+);
 myProfile.placesLived.push({place: "Lagos, Nigeria", length: "12 year"});
 myProfile.placesLived.push({place: "Accra, Ghana", length: "3 year"});
 myProfile.placesLived.push({place: "Emirate, Dubai", length: "4 year"});
