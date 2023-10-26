@@ -1,71 +1,45 @@
-
 const fullname = 'Umah Godday';
-const favoriteFoods = ['Bread','Fried Rice','Pizza','Ramen','Halal Burger'];
+const favoriteFoods = ['Bread', 'Fried Rice', 'Pizza', 'Ramen', 'Halal Burger'];
 
-//const currentYear = currentDate.getFullYear();
-//const currentYear = new Date().getFullYear();   
-const currentYear = 2023
+// Removed commented out lines for currentYear. You have already defined it below.
+const currentYear = 2023;
 
-
-
-//const directory = 'images/';
-//const fileName = 'myself.jpg';
-//const profilePicture = directory + fileName;
-//console.log('profile picture:', profilePicture);
-
+// Initialize nameElement
 const nameElement = document.getElementById('name');
-nameElement.textContent = fullname
+if (nameElement) {
+    nameElement.innerHTML = `<strong>${fullname}</strong>`;
+}
 
+// Initialize profilePicture
 const profilePicture = 'images/myself.jpg';
 
-//const foodElement = document.getElementById('food');
+// Initialize foodElement
 const foodElement = document.getElementById('food');
-foodElement.textContent = favoriteFoods
-foodElement.innerHTML = favoriteFoods.join(", ");
+if (foodElement) {
+    foodElement.innerHTML = favoriteFoods.join(", ");
+}
 
+// Initialize yearElement
+const yearElement = document.querySelector('#year');
+if (yearElement) {
+    yearElement.textContent = currentYear;
+}
 
-var yearElement = document.querySelector('#year');
-yearElement.textContent = currentYear;
-
-//const yearElement = document.querySelector('#year');
-
-//var imageElement = document.querySelector('home');
-
-nameElement.innerHTML = `<strong>${fullname}</strong>`; 
-//yearElement.textContent = currentYear.toString();
-yearElement.textContent = currentYear;
-
-
-const delicious= "Lasagna";
+// Update favorite foods
+const delicious = "Lasagna";
 favoriteFoods.push(delicious);
-//foodElement.innerHTML += "<br>" + delicious;
-foodElement.innerHTML+= `<br>${favoriteFoods}`;
-//foodElement.textContent = favoriteFoods
-favoriteFoods.shift();
-foodElement.innerHTML+= `<br>${favoriteFoods}`;
-//foodElement.innerHTML += favoriteFoods;
-favoriteFoods.pop();
-foodElement.innerHTML+= `<br>${favoriteFoods}`;
-//foodElement.innerHTML += favoriteFoods;
+if (foodElement) {
+    foodElement.innerHTML += `<br>${favoriteFoods}`;
+    favoriteFoods.shift();
+    foodElement.innerHTML += `<br>${favoriteFoods}`;
+    favoriteFoods.pop();
+    foodElement.innerHTML += `<br>${favoriteFoods}`;
+}
 
-imageElement.setAttribute('src', profilePicture);
-imageElement.setAttribute('alt', `profile image of ${fullname}`);
-
-//var profilePicture = "images/myself.jpg";
-//var imageElement = document.querySelector("#profilePicture");
-//imageElement.setAttribute("src", profilePicture);
-// var profilePicturePath = 'myself.jpg';
-// var profileimage = document.getElementById('profileimage');
-// profileimage.setAttribute('src', profilePicturePath);
-// profileimage.alt = 'profile image of ' + fullname;
-//const favoriteFoods = ['bread','Fried Rice','Pizza','Ramen','Halal Burger'];
-//const foodText = favoriteFoods.join(', ');
-
-
-
-
-//imageElement.setAttribute('src', console());
-//imageElement.setAttribute('alt', `profile image of ${fullname}`);
-//foodElement.textContent = foodText;
-
-
+// Initialize imageElement
+// Assuming the image element in your HTML has the id "profilePicture"
+var imageElement = document.getElementById('profilePicture');
+if (imageElement) {
+    imageElement.setAttribute('src', profilePicture);
+    imageElement.setAttribute('alt', `profile image of ${fullname}`);
+}
